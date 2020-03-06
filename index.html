@@ -64,6 +64,68 @@
       <div class="outer">
         <section id="main">
   
+    <article id="n-hexo写博客" class="article article-type-n" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/03/06/hexo%E5%86%99%E5%8D%9A%E5%AE%A2/" class="article-date">
+  <time datetime="2020-03-06T08:37:15.000Z" itemprop="datePublished">2020-03-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/06/hexo%E5%86%99%E5%8D%9A%E5%AE%A2/">hexo写博客</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>博客都放在source/_posts目录下，是md文件</p>
+<h3 id="1-修改配置文件-config-yml-中的post-asset-folder"><a href="#1-修改配置文件-config-yml-中的post-asset-folder" class="headerlink" title="1.修改配置文件__config.yml 中的post_asset_folder"></a>1.修改配置文件__config.yml 中的post_asset_folder</h3><p>修改为true</p>
+<img src="../images/hexo写博客/_config.png" style="zoom: 67%;">
+
+<h3 id="2-安装插件"><a href="#2-安装插件" class="headerlink" title="2. 安装插件"></a>2. 安装插件</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-asset-image --save</span><br></pre></td></tr></table></figure>
+
+<p>这是上传图片的插件</p>
+<p>插件安装完后命令行新建</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n "title"</span><br></pre></td></tr></table></figure>
+
+<p>在source/_posts目录下不仅会出现title.md，还会出现title文件夹用于存放图片</p>
+<h3 id="3-在source目录下新建images目录"><a href="#3-在source目录下新建images目录" class="headerlink" title="3. 在source目录下新建images目录"></a>3. 在source目录下新建images目录</h3><p>（个人比较建议图片放在一个单独的文件夹下，读者可不新建）</p>
+<p>将步骤2中的文件夹移动到images目录下</p>
+<p>在md中引用图片路径：</p>
+<img src="../images/hexo写博客/www.png" style="zoom:67%;">
+
+<p>若并未重新新建，引用路径为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">www&#x2F;www.png (图片名为www.png)</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-生成并部署"><a href="#4-生成并部署" class="headerlink" title="4. 生成并部署"></a>4. 生成并部署</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo g # 生成</span><br><span class="line"></span><br><span class="line">hexo s # 本地查看</span><br><span class="line"></span><br><span class="line">hexo d # 部署</span><br></pre></td></tr></table></figure>
+
+<p>如部署过程中遇到错误，可以先</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean  # 清除缓存</span><br></pre></td></tr></table></figure>
+
+<p>部署成功后访问：</p>
+<p><img src="../images/hexo%E5%86%99%E5%8D%9A%E5%AE%A2/finished.png" alt="finished"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/03/06/hexo%E5%86%99%E5%8D%9A%E5%AE%A2/" data-id="ck7g3kiq70001u8tv9gn70yn5" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-用Hexo+Github搭建个人博客" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/03/06/%E7%94%A8Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="article-date">
@@ -95,7 +157,7 @@
 <h2 id="1-安装node-js"><a href="#1-安装node-js" class="headerlink" title="1. 安装node.js"></a>1. 安装node.js</h2><p> <a href="https://nodejs.org/zh-cn/download/" target="_blank" rel="noopener">下载链接</a> </p>
 <p>下载好安装包之后一路next就行</p>
 <p>命令行测试</p>
-<img src="../images/用Hexo+Github搭建个人博客/nodejs.png" style="zoom:50%;">
+<img src="../images/用Hexo+Github搭建个人博客/nodejs.png" style="zoom:80%;">
 
 
 
@@ -106,7 +168,7 @@
 <h2 id="3-注册github，配置SSH，新建仓库"><a href="#3-注册github，配置SSH，新建仓库" class="headerlink" title="3. 注册github，配置SSH，新建仓库"></a>3. 注册github，配置SSH，新建仓库</h2><p><a href="https://github.com/" target="_blank" rel="noopener">Github官网</a>注册一个账号 </p>
 <p>配置ssh的步骤可以<a href="https://www.cnblogs.com/MrReed/p/6373988.html" target="_blank" rel="noopener">参考链接</a></p>
 <p>在github新建仓库username.github.io(此处username是你github的用户名)</p>
-<img src="../images/用Hexo+Github搭建个人博客/github-repo.png" alt="github-repo" style="zoom: 33%;">
+<img src="../images/用Hexo+Github搭建个人博客/github-repo.png" alt="github-repo" style="zoom: 50%;">
 
 <p>我已经创建过了所以显示already exists</p>
 <h2 id="4-搭建"><a href="#4-搭建" class="headerlink" title="4. 搭建"></a>4. 搭建</h2><h3 id="4-1-在本地新建一个空文件夹"><a href="#4-1-在本地新建一个空文件夹" class="headerlink" title="4.1 在本地新建一个空文件夹"></a>4.1 在本地新建一个空文件夹</h3><p>例如我为了方便，文件夹命名为zwexcelwang.github.io（跟github仓库同名，以后我就不会忘里面放的文件是什么了）</p>
@@ -179,7 +241,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/03/06/%E7%94%A8Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" data-id="ck7fx8pwg0001f0tv8hy5ef12" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/03/06/%E7%94%A8Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" data-id="ck7g3kiq90002u8tvc5ccaphz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -228,7 +290,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/02/19/hello-world/" data-id="ck7fx8pw90000f0tv0wax3s9q" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/02/19/hello-world/" data-id="ck7g3kiq10000u8tvcsimh0q1" class="article-share-link">Share</a>
       
       
     </footer>
@@ -267,6 +329,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/03/06/hexo%E5%86%99%E5%8D%9A%E5%AE%A2/">hexo写博客</a>
+          </li>
         
           <li>
             <a href="/2020/03/06/%E7%94%A8Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">用Hexo+Github搭建个人博客</a>
